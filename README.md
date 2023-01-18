@@ -14,3 +14,10 @@ for(int i=0;i<n;i++){
   array[i] = temp;
 }
 ```
+#### Passing 2D-Array declared using DMA to function
+
+```c
+int function(int** arr){
+  // can access arr[i][j]
+}
+```
