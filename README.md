@@ -6,7 +6,9 @@
 #### Initializing Array Using Malloc
 ```c
 int** array;
+// allocating memory for n pointers of size int*
 array = (int**)malloc(n*sizeof(int*));
+// allocating memory for n int values to each pointer
 for(int i=0;i<n;i++){
   int* temp = (int*)malloc(n*sizeof(int));
   array[i] = temp;
