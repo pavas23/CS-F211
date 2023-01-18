@@ -3,7 +3,8 @@
 
 ## Important Notes
 
-```
+#### Initializing Array Using Malloc
+```c
 int** array;
 array = (int**)malloc(n*sizeof(int*));
 for(int i=0;i<n;i++){
