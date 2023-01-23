@@ -3,17 +3,24 @@
 int main(void){
     int n=0;
     scanf("%d",&n);
-    int count = 0;
-    for(int i=n*n-1;i>=0;i--){
-        count++;
-        if(count%n != 0){
-            printf("%d - ",2+i*2);
+    int top = n*n-n;
+    int bottom  = 2*n+2;
+    int count_top = 0;
+    int count_bottom = 0;
+    for(int i=0;i<n*n;i++){
+        if(i%2 != 0){
+            if(count_top != 0){
+            top -= 2;
+            }
+            printf("%d ",top);
+            count_top++;
         }
-        else if(count%n == 0){
-            printf("%d | ",2+i*2);
-        }
-        if(count%n == 0){
-            printf("\n");
+        else{
+            if(count_bottom != 0){
+                bottom -= 2;
+            }
+            printf("%d ",bottom);
+            count_bottom++;
         }
     }
     printf("\n");
