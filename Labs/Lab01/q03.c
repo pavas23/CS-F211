@@ -1,17 +1,30 @@
-// left
-
 #include<stdio.h>
+#include<stdlib.h>
 
-void sortArr(int* arr,int n){
-    // bubble sort
-    for(int i=0;i<n-1;i++){
-        for(int j=0;j<n-i-1;j++){
-            if(arr[j] > arr[j+1]){
-                int temp = arr[j];
-                arr[j] =  arr[j+1];
-                arr[j+1] = temp;
-            }
+int indices(int* arr, int n, int i, int sum, int* ans_arr){
+    if(i == n-1){
+        if(arr[i] == sum){
+            ans_arr[i] = 1;
+            return 1;
         }
+        else{
+            return 0;
+        }
+    }
+    // recursive call for exclusion
+    if(indices(arr,n,i+1,sum,ans_arr)){
+        return 1;
+    }
+
+    // recursive call for inclusion
+    ans_arr[i] = 1;
+    if(indices(arr,n,i+1,sum-arr[i],ans_arr)){
+        return 1;
+    }
+    else{
+        // if recursive call for inclusion fails then backtracking
+        ans_arr[i] = 0;
+        return 0;
     }
 }
 
@@ -21,73 +34,48 @@ int main(void){
     int n=0,s=0;
     scanf("%d",&n);
     int arr[n];
-    int arr_extra[n];
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    for(int i=0;i<n;i++){
-        arr_extra[i] = arr[i];
-    }
     scanf("%d",&s);
 
-    // sorting the array
-    sortArr(arr,n);
+    // if n and s both are 0 then null set is possible
+    if(s == 0 && n == 0){
+        printf("POSSIBLE\n");
+        return 0;
+    }
 
-    int i=0,j=n-1;
-    int temp_arr[n];
-    int sum = s;
-    int k = 0;
+    // making bit array for storing 0 if index is not included and 1 if index is included
+    int* ans_arr = (int*)calloc(n,sizeof(int));
+    int ans = indices(arr,n,0,s,ans_arr);
+
+    // checking if possible or not
     int flag = 0;
-
-    while(i<=j){
-        if(arr[i] + arr[j] < sum){
-            temp_arr[k++] = arr[i];
-            temp_arr[k++] = arr[j];
-            sum = s - arr[i] - arr[j];
-            i++;
-            j--;
-        }
-        else if(arr[i] + arr[j] > sum){
-            j--;
-        }
-        else{
-            temp_arr[k] = arr[i];
-            temp_arr[++k] = arr[j];
-            k++;
+    for(int i=0;i<n;i++){
+        if(ans_arr[i] == 1){
             flag = 1;
-            break;
-        }
-        if(sum == 0){
-            flag = 1;
-            break;
         }
     }
 
-    // if flag is true then we have found the sum
-    if(flag){
-        int indices[n];
-        int y = 0;
-        for(int i=0;i<k;i++){
-            for(int j=0;j<n;j++){
-                if(arr_extra[j] == temp_arr[i]){
-                    indices[y] = j;
-                    y++;
-                    arr_extra[j] = -1;
-                    break;
-                }
-            }
-        }
-        // sorting the indices
-        sortArr(indices,y);
-        for(int x=0;x<y;x++){
-            printf("%d ",indices[x]);
-        }
-        printf("\n");
+    // if sum != 0 and all indicies are not included then not possible
+    if(flag == 0){
+        printf("NOT POSSIBLE\n");
+        return 0;
     }
-    else{
-        printf("\nNOT POSSIBLE\n");
+
+    // now print indices which have 1 in bit array
+    printf("POSSIBLE\n");
+    for(int i=0;i<n;i++){
+        if(ans_arr[i] == 1){
+            printf("%d ",i);
+        }
     }
+    printf("\n");
     return 0;
-
 }
+
+
+
+
+
 
