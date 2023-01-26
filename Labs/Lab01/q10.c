@@ -33,10 +33,12 @@ int main(void){
         for(int i=0;i<n1;i++){
             flag = 0;
             for(int j=0;j<n2;j++){
-                if(arr1[j] == arr2[i]){
+                if(arr2[i] == arr1[j]){
                     flag = 1;
                     arr[k] = j+1;
                     k++;
+                    arr1[j] = ' ';
+                    break;
                 }
             }
             if(flag == 0){
@@ -52,7 +54,4 @@ int main(void){
         printf("\n\n");
     }
 }
-
-
-
 
