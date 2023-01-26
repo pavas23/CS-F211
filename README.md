@@ -25,5 +25,5 @@ int function(int** arr){
 
 | Lab | Topic | Lab Sheet | Date |
 | ------------- | ------------- | --- | -- |
-| 1  | Implementing Basic Algorithms like two pointer,sliding window, quick sort etc. | [Lab 1](ab-1/labsheet.pdf) | 22 Jan 2022 |
+| 1  | Implementing Basic Algorithms like two pointer,sliding window, quick sort etc. | [Lab 1](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab01/LabSheet1.pdf) | 22 Jan 2022 |
 | 2  | Command Line Arguments, Compiling and Linking C files, File I/O, Pointers, Linked Lists _(non-evaluative)_ | [Lab 2](lab-2/labsheet.pdf) | 29 Jan 2022 |
