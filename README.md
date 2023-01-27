@@ -24,6 +24,22 @@ int function(int** arr){
   // can access arr[i][j]
 }
 ```
+#### Finding length of Array in C
+```c
+int arr[100];
+int size = (&arr)[1]-arr;
+// size = 100
+// (&arr)[1] points to memory location just after the last element of array and arr points to base index of array
+// similarly for character arrays
+```
+#### Finding length of 2D-Array in C
+```c
+int arr[5][3];
+int size = (&arr)[1]-arr;
+// size = 5
+// (&arr)[1] points to memory location just after the last row of array and arr points to base index of array
+```
+
 ### Lab Summary
 
 | Lab | Topic | Lab Sheet | Date |
