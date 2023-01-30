@@ -4,7 +4,7 @@ int main(void){
     int a,b;
     // taking input
     scanf("%d %d",&a,&b);
-    int primes[1000];
+    int primes[1000000];
     int x = 0;
 
     // storing primes between a and b in array
