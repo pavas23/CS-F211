@@ -2,12 +2,20 @@
 #include<stdlib.h>
 
 int indices(int* arr, int n, int i, int sum, int* ans_arr){
+    if(sum==0){
+        // if sum becomes 0 before checking last element then return true
+        return 1;
+    }
+    if(sum<0){
+        return 0;
+    }
     if(i == n-1){
         if(arr[i] == sum){
             ans_arr[i] = 1;
             return 1;
         }
         else{
+            ans_arr[i] = 0;
             return 0;
         }
     }
@@ -15,7 +23,6 @@ int indices(int* arr, int n, int i, int sum, int* ans_arr){
     if(indices(arr,n,i+1,sum,ans_arr)){
         return 1;
     }
-
     // recursive call for inclusion
     ans_arr[i] = 1;
     if(indices(arr,n,i+1,sum-arr[i],ans_arr)){
@@ -28,7 +35,7 @@ int indices(int* arr, int n, int i, int sum, int* ans_arr){
     }
 }
 
-int main(void){
+int main(void){ 
 
     // taking input from the user
     int n=0,s=0;
@@ -47,8 +54,10 @@ int main(void){
 
     // making bit array for storing 0 if index is not included and 1 if index is included
     int* ans_arr = (int*)calloc(n,sizeof(int));
-    int ans = indices(arr,n,0,s,ans_arr);
 
+    int ans = 0;
+    ans = indices(arr,n,0,s,ans_arr);
+    
     // checking if possible or not
     int flag = 0;
     for(int i=0;i<n;i++){
@@ -73,3 +82,9 @@ int main(void){
     printf("\n");
     return 0;
 }
+
+
+
+
+
+

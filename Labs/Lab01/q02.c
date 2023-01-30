@@ -130,17 +130,17 @@ int main(void){
     }
 
     if(rows_identical == p && cols_identical == q){
-        // printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
+        printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
         printf("YES\n");
         exit(0);
     }
     else if(rows_identical > 0 || cols_identical > 0){
-        // printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
+        printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
         printf("PARTIAL\n");
         exit(0);
     }
     else{
-        // printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
+        printf("Number of Identical Rows: %d and Number of Identical Columns: %d\n",rows_identical,cols_identical);
         printf("NO\n");
     }
     return 0;

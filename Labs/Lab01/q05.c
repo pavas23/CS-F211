@@ -90,28 +90,33 @@ int main(void)
     }
     
     // adding dashes
-    for (int i = 0; i < a; i++){
-        for (int j = 0; j < a; j++){
-            // checking at even indices in a row if the diff between numbers is 2 or -2 then at odd index '-' will come
-            if (i % 2 == 0 && j % 2 == 0){
-                if ((arr[i][j] - arr[i][j + 2] == 2) || (arr[i][j] - arr[i][j + 2] == -2)){
-                    arr[i][j + 1] = -1;
+    for(int i=0;i<2*n-1;i++){
+        for(int j=0;j<2*n-1;j++){
+             // checking at even indices in a row if the diff between numbers is 2 or -2 then at odd index '-' will come
+            if(j != 2*n-2){
+                if(i%2 == 0 && j%2 == 0){
+                    if(arr[i][j]-arr[i][j+2] == 2 || arr[i][j]-arr[i][j+2] == -2){
+                        arr[i][j+1] = -1;
+                    }
                 }
             }
             // checking at even indices in a cloumns if the diff between numbers is 2 or -2 then at odd index '|' will come
-            if (i % 2 == 0 && j % 2 == 0){
-                if ((arr[i][j] - arr[i + 2][j] == 2) || (arr[i][j] - arr[i + 2][j] == -2)){
-                    arr[i + 1][j] = -2;
+            if(i != 2*n-2){
+                if(i%2 == 0 && j%2 == 0){
+                    if(arr[i][j]-arr[i+2][j] == 2 || arr[i][j]-arr[i+2][j] == -2){
+                        arr[i+1][j] = -2;
+                    }
                 }
             }
         }
     }
+
     printf("\n");
     for (int i = 0; i < a; i++){
         for (int j = 0; j < a; j++){
             // at even index number will be there
             if (i % 2 == 0 && j % 2 == 0){
-                printf("%4d", arr[i][j]);
+                printf("%3d", arr[i][j]);
             }
             if (arr[i][j] == -1){
                 printf(" - ");
@@ -124,7 +129,10 @@ int main(void)
                 printf("   ");
             }
         }
-        printf("\n\n");
+        printf("\n");
     }
     return 0;
 }
+
+
+
