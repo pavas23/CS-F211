@@ -44,5 +44,5 @@ int size = (&arr)[1]-arr;
 
 | Lab | Topic | Lab Sheet | Date |
 | ------------- | ------------- | --- | -- |
-| 1  | Implementing Basic Algorithms like two pointer, sliding window, quick sort etc. | [Lab 1](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab01/LabSheet1.pdf) | 31 Jan 2023 |
+| 1  | Implementing Basic Algorithms like Two pointer, Sliding window, Quick sort etc. | [Lab 1](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab01/LabSheet1.pdf) | 31 Jan 2023 |
 | 2  | Command Line Arguments, Compiling and Linking C files, File I/O, Pointers, Linked Lists _(non-evaluative)_ | [Lab 2](lab-2/labsheet.pdf) | 29 Jan 2022 |
