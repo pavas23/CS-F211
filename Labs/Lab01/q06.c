@@ -48,8 +48,3 @@ int main(void){
     printf("%d %d\n",max_digit,max_freq);
     return 0;
 }
-
-
-
-
-
