@@ -1,5 +1,7 @@
 #include "template.h"
 
+// removing kth last element
+
 int length(Node* head){
     int length = 0;
     if(head == NULL){

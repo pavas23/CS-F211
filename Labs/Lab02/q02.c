@@ -3,6 +3,7 @@
 // merging two sorted singly linked list
 
 Node* mergeLists(Node* head1, Node* head2){
+    
     Node *curr1 = head1, *curr2 = head2;
     Node* merged;
 

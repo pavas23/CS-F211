@@ -1,38 +1,12 @@
 #include "template.h"
 
-// left
+// sorting a singly linked list
 
-int length(Node* head){
-    int length = 0;
-    if(head == NULL){
-        return 0;
-    }
-    while(head != NULL){
-        head = head->next;
-        length++;
-    }
-    return length;
-}
+Node* mergeLists(Node* first,Node* second){
 
-Node* mergeLists(Node* head,int start,int mid,int end){
-    int index = 0;
-    Node* ptr = head;
-    Node *curr1,*curr2;
-    printf("%d\n",mid);
-    while(ptr != NULL){
-        if(index == mid){
-            curr1 = head;
-            curr2 = ptr->next;
-            ptr->next = NULL;
-            break;
-        }
-        index++;
-        ptr = ptr->next;
-    }
-    printList(curr1);
-    printList(curr2);
+    Node* curr1 = first;
+    Node* curr2 = second;
     Node* merged;
-
     if(curr1->data <= curr2->data){
         merged = createNode(curr1->data);
         curr1 = curr1->next;
@@ -65,45 +39,47 @@ Node* mergeLists(Node* head,int start,int mid,int end){
         curr_new = curr_new->next;
         curr2 = curr2->next;
     }
-
     curr_new->next = NULL;
-    printf("%d\n",merged->data);
     return merged;
 }
 
-// Node* giveMid(Node* head){
-//     if(head == NULL){
-//         return NULL;
-//     }
-//     int index = 0;
-//     int size = length(head);
-//     while(head != NULL){
-//         if(index == size/2){
-//             printf("%d\t",head->data);
-//             return head;
-//         }
-//         head = head->next;
-//         index++;
-//     }
-//     return NULL;
-// }
+void MakingTwoLists(Node* head, Node** first, Node** second){
 
-void mergeSort(Node** head,int start,int end){
-    if(*head == NULL){
+    Node* fast;
+    Node* slow;
+    slow = head;
+    fast = head->next;
+
+    while (fast != NULL) {
+        fast = fast->next;
+        if (fast != NULL) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+    }
+
+    // 'slow' is before the midpoint in the list, so split it in two at that point.
+    *first = head;
+    *second = slow->next;
+    slow->next = NULL;
+}
+
+void mergeSort(Node** headRef){
+    Node* head = *headRef;
+    Node* first;
+    Node* second;
+    if(head == NULL || head->next == NULL){
         return;
     }
-    if(start >= end){
-        return;
-    }
-    int mid = (start+end)/2;
-    mergeSort(head,0,mid);
-    mergeSort(head,mid+1,end);
-    *head = mergeLists(head,start,mid,end);
+    MakingTwoLists(head,&first,&second);
+    mergeSort(&first);
+    mergeSort(&second);
+    *headRef =  mergeLists(first,second);
 }
 
 Node* sortList(Node* head){
-    int n = length(head);
-    mergeSort(&head,0,n-1);
+    // this will change the head pointer, and it will point to sorted linked list
+    mergeSort(&head);
     return head;
 }
 
@@ -112,7 +88,6 @@ int main(void){
     Node* sorted = sortList(head);
     printList(sorted);
     freeList(head);
-    freeList(sorted);
     return 0;
 }
 
