@@ -46,4 +46,4 @@ int size = (&arr)[1]-arr;
 | ------------- | ------------- | --- | -- |
 | 1  | Implementing Basic Algorithms like Two pointer, Sliding window, Quick sort etc. | [Lab 1](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab01/LabSheet1.pdf) | 31 Jan 2023 |
 | 2  | Implementing basic operations on Singly linked list and Structures | [Lab 2](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab02/LabSheet2.pdf) | 7 Feb 2023 |
-| 3  | Doubly Linked Lists and Binary Search | [Lab 3](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab02/LabSheet2.pdf) | 14 Feb 2023 |
+| 3  | Doubly Linked Lists and Binary Search | [Lab 3](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab03/LabSheet3.pdf) | 14 Feb 2023 |
