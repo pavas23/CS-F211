@@ -11,7 +11,10 @@ int main(void){
     long long int sqrt = 0;
     while(low <= high){
         long long int mid = (low+high)/2;
-        if(mid*mid == n){
+        if(mid > 1e9){
+            high = mid-1;
+        }
+        else if(mid*mid == n){
             sqrt = mid;
             break;
         }
@@ -29,8 +32,11 @@ int main(void){
         int flag = 0;
         while(low <= high){
             long long int mid = (low+high)/2;
+            if(mid > 1e9){
+                high = mid-1;
+            }
             // diff should be greater than 0 and less than 1+2*mid as we are dropping the decimal part
-            if(n - mid*mid >= 0 && n-mid*mid < 1+2*mid){
+            else if(n - mid*mid >= 0 && n-mid*mid < 1+2*mid){
                 sqrt = mid;
                 flag = 1;
                 break;
@@ -46,3 +52,5 @@ int main(void){
     printf("%lld\n",sqrt);
     return 0;
 }
+
+

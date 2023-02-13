@@ -34,3 +34,6 @@ int main(void){
     printf("%ld %ld\n",teamA,teamB);
     return 0;
 }
+
+
+

@@ -59,7 +59,6 @@ void playSongXNext(Node** headRef,Node** currSongRef,int x){
                 nextOfCurrSong->prev = head;
             }
             head->next = nextOfCurrSong;
-            printList(*headRef);
             return;
         }
         head = head->next;

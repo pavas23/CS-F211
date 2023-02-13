@@ -33,6 +33,7 @@ int main(void){
         ptr = ptr->next;
     }
     tail = ptr;
+    k = k%n;
     for(int i=0;i<k;i++){
         rotateList(&head,&tail);
     }
