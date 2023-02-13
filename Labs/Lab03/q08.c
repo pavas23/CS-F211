@@ -46,5 +46,3 @@ int main(void){
     printf("%lld\n",sqrt);
     return 0;
 }
-
-
