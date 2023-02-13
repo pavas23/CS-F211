@@ -3,6 +3,7 @@
 
 ## Topics Covered
   - Time and Space Complexity
+  - Searching and Sorting Algorithms
 
 ## Important Notes
 
