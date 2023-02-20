@@ -20,5 +20,3 @@ int main(void){
     printf("%lld %lld\n",minPairs,maxPairs);
     return 0;
 }
-
-
