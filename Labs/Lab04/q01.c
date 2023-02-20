@@ -137,6 +137,3 @@ int main(void){
     printArray(newArr,count);
     return 0;
 }
-
-
-
