@@ -101,9 +101,6 @@ int main(void){
     // sorting the slots according to the start time, if start time equal then sort according to end time
     sortAccordingToStartTime(arr,n);
 
-    printf("\n\n");
-    printArray(arr,n);
-
     // merging the slots into newArr
     int count = 0;
     int** newArr;
