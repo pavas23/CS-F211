@@ -41,5 +41,3 @@ int main(void){
     printf("%lld\n",largestNumCoPrime);
     return 0;
 }
-
-
