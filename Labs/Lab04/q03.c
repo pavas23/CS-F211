@@ -47,6 +47,3 @@ int main(void){
     printf("%d\n",numPairs);
     return 0;
 }
-
-
-
