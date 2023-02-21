@@ -49,25 +49,40 @@ void mergeSort(ll* arr,ll start,ll end){
     mergeTwoSortedArrays(arr,start,mid,end);
 }
 
+ll findMinSteps(ll* arr, int n, int val){
+    ll steps = 0;
+    for(ll i=0;i<n;i++){
+        if(arr[i] < val){
+            steps += val-arr[i];
+        }else{
+            steps += arr[i]-val;
+        }
+    }
+    return steps;
+}
+
 int main(void){
     ll n = 0;
     scanf("%lld",&n);
     ll* arr = (ll*)malloc(n*sizeof(ll));
+    ll sum= 0;
     for(ll i=0;i<n;i++){
         scanf("%lld",&arr[i]);
+        sum += arr[i];
     }
     mergeSort(arr,0,n-1);
 
     ll medianElement = arr[n/2];
+    ll avg = sum/n;
     ll steps = 0;
 
-    for(ll i=0;i<n;i++){
-        if(arr[i] < medianElement){
-            steps += medianElement-arr[i];
-        }else{
-            steps += arr[i]-medianElement;
-        }
+    // number of chocolates are fixed, so if median exceeds avg than give avg number of chocolates to each student
+    if(medianElement<=avg){
+        steps = findMinSteps(arr,n,medianElement);
+    }else{
+        steps = findMinSteps(arr,n,avg);
     }
+
     printf("%lld\n",steps);
     return 0;
 }
