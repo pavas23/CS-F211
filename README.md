@@ -4,6 +4,10 @@
 ## Topics Covered
   - Time and Space Complexity
   - Searching and Sorting Algorithms
+  - Stacks and Queues
+  - Linked Lists
+  - Priority Queues and Heaps
+  - Trees
 
 ## Important Notes
 
