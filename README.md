@@ -1,5 +1,5 @@
 ## CS-F211
-2-2, DSA course in C at BITS Pilani, Hyderabad Campus
+2-2, DSA course at BITS Pilani, Hyderabad Campus
 
 ## Topics Covered
   - Time and Space Complexity
@@ -54,4 +54,4 @@ int size = (&arr)[1]-arr;
 | 3  | Doubly Linked Lists and Binary Search | [Lab 3](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab03/LabSheet3.pdf) | 14 Feb 2023 |
 | 4  | Sorting and Math | [Lab 4](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab04/LabSheet4.pdf) | 21 Feb 2023 |
 | 5  | Recursion, Prefix Sum, Sliding Window, Bitmasking | [Lab 5](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab05/LabSheet5.pdf) | 28 Feb 2023 |
-| 6  | Stacks and Queues | [Lab 6](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab05/LabSheet5.pdf) | 07 Mar 2023 |
+| 6  | Stacks and Queues | [Lab 6](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab06/LabSheet6.pdf) | 07 Mar 2023 |
