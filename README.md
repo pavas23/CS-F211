@@ -55,3 +55,9 @@ int size = (&arr)[1]-arr;
 | 4  | Sorting and Math | [Lab 4](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab04/LabSheet4.pdf) | 21 Feb 2023 |
 | 5  | Recursion, Prefix Sum, Sliding Window, Bitmasking | [Lab 5](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab05/LabSheet5.pdf) | 28 Feb 2023 |
 | 6  | Stacks and Queues | [Lab 6](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab06/LabSheet6.pdf) | 07 Mar 2023 |
+| 7  | Heaps, Binary Trees and Binary Search Trees | [Lab 7](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab07/LabSheet7.pdf) | 28 Mar 2023 |
+
+
+
+
+
