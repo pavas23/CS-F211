@@ -7,7 +7,9 @@
   - Stacks and Queues
   - Linked Lists
   - Priority Queues and Heaps
-  - Trees
+  - Hash Tables
+  - BST, Balanced BST, Red Black Trees
+  - Skip List
 
 ## Important Notes
 
