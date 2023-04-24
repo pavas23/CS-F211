@@ -60,3 +60,4 @@ int size = (&arr)[1]-arr;
 | 7  | Heaps, Binary Trees and Binary Search Trees | [Lab 7](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab07/LabSheet7.pdf) | 28 Mar 2023 |
 | 8  | Maps, Sets and Strings | [Lab 8](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab08/LabSheet8.pdf) | 11 Apr 2023 |
 | 9  | Maps, Sets, Strings and Stacks | [Lab 9](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab09/LabSheet9.pdf) | 18 Apr 2023 |
+| 10  |  Divide and Conquer, Recap | [Lab 10](https://github.com/pavas23/CS-F211/blob/main/Labs/Lab10/LabSheet10.pdf) | 25 Apr 2023 |
