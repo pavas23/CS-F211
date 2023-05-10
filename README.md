@@ -10,6 +10,10 @@
   - Hash Tables
   - BST, Balanced BST, Red Black Trees
   - Skip List
+  - Divide and Conquer
+  - Greedy Algorithm
+  - Dynamic Programming
+  - Graph Algorithms
 
 ## Important Notes
 
